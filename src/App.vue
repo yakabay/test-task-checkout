@@ -6,7 +6,7 @@
 					<div class="col-xs-11 col-xl-9" style="height: 100%">
 						<div class="header__container" style="height: 100%">
 							<router-link to="/">Home</router-link>
-							<router-link to="/cart">Cart</router-link>
+							<router-link to="/checkout">Cart</router-link>
 						</div>
 					</div>
 				</div>
@@ -16,7 +16,7 @@
 
 		<main class="container">
 			<div class="row center-xs" style="height: 100%">
-				<div class="col-xs-11 col-xl-9" style="height: 100%">
+				<div class="col-xs-11 col-md-9 col-lg-11 col-xl-9" style="height: 100%">
 					<div class="card">
 						<router-view/>
 					</div>
