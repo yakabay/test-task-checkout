@@ -11,7 +11,6 @@ import CheckoutSteps from '@/components/CheckoutSteps.vue'
 import OrderSummary from '@/components/OrderSummary.vue'
 
 export default {
-	name: 'home',
 	components: {
 		'checkout-steps': CheckoutSteps,
 		'order-summary': OrderSummary,

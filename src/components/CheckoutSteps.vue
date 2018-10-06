@@ -1,6 +1,11 @@
 <template>
   	<div class="checkoutSteps">
-    	<h1>{{ name }}</h1>
+    	<nav>
+			<router-link to="/checkout/shipping">Shipping</router-link>
+			<router-link to="/checkout/billing">Billing</router-link>
+			<router-link to="/checkout/payment">Payment</router-link>
+		</nav>
+		<router-view/>
   	</div>
 </template>
 
