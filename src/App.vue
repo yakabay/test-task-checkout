@@ -2,7 +2,7 @@
 	<div id="app">
 		<header class="header">
 			<div class="container">
-				<div class="row center-xs" style="height: 100%; text-align: initial">
+				<div class="row center-xs" style="height: 100%">
 					<div class="col-xs-11 col-xl-9" style="height: 100%">
 						<div class="header__container" style="height: 100%">
 							<router-link to="/">Home</router-link>
@@ -15,7 +15,7 @@
 		</header>
 
 		<main class="container">
-			<div class="row center-xs" style="height: 100%">
+			<div class="row center-xs" style="height: 100%; text-align: initial">
 				<div class="col-xs-11 col-md-9 col-lg-11 col-xl-9" style="height: 100%">
 					<div class="card">
 						<router-view/>
