@@ -11,7 +11,7 @@
 					<div class="text-sm text-grey-darkest">Quantity: {{ product.quantity }}</div>
 				</div>
 			</div>
-			<div class="text-md text-grey-dark pt-px">${{ product.price }}</div>
+			<div class="text-md text-grey-dark pt-px pl-2">${{ product.price }}</div>
 		</div>
 		<hr class="border-t border-grey-lighter -ml-2 -mr-1">
 	</div>

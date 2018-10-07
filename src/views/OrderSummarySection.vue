@@ -2,7 +2,7 @@
   	<div class="oderSummary flex flex-col justify-between bg-grey-lightest pt-7 px-4 sm:px-12 lg:px-4 pb-4">
 		<div>
 			<div class="flex justify-between items-baseline mb-2">
-				<h3 class="text-primary text-2xl font-normal tracking-tight">Order Summary</h3>
+				<h3 class="title-2xl">Order Summary</h3>
 				<a href="#" class="text-md text-grey underline">edit order</a>
 			</div>
 		
@@ -23,7 +23,7 @@
 
 			<hr class="border-t border-grey-lighter">
 
-			<div class="flex justify-between pt-3 pb-4">
+			<div class="flex justify-between pt-3 pb-5">
 				<div class="text-md text-primary font-semibold">Total</div>
 				<div class="text-md text-primary font-semibold">${{ totalPrice.toFixed(2) }}</div>
 			</div>

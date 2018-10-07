@@ -34,12 +34,16 @@
 @tailwind screens;
 
 
-.checkout-section-title {
-	@apply text-3xl text-primary font-light text-left tracking-tight;
+.title-3xl {
+	@apply text-3xl text-primary font-light text-left tracking-tight mb-6;
+}
+
+.title-2xl {
+	@apply text-primary text-2xl font-normal tracking-tight;
 }
 
 @screen lg {
-	.checkout-section-title {
+	.title-3xl {
 		@apply text-4xl;
 	}
 }
