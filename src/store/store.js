@@ -7,7 +7,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
 	state: {
 		countries: data.countries,
-		products: data.products,
+		cartProducts: data.products,
 	},
 	mutations: {
 

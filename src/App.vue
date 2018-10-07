@@ -2,7 +2,7 @@
 	<div id="app">
 		<header class="header">
 			<div class="container">
-				<div class="row center-xs" style="height: 100%">
+				<div class="row center-xs" style="height: 100%; text-align: initial">
 					<div class="col-xs-11 col-xl-9" style="height: 100%">
 						<div class="header__container" style="height: 100%">
 							<router-link to="/">Home</router-link>
@@ -31,10 +31,19 @@
 @tailwind preflight;
 @tailwind components;
 @tailwind utilities;
+@tailwind screens;
+
 
 .checkout-section-title {
-	@apply text-4xl text-primary font-light text-left tracking-tight;
+	@apply text-3xl text-primary font-light text-left tracking-tight;
 }
+
+@screen lg {
+	.checkout-section-title {
+		@apply text-4xl;
+	}
+}
+
 
 #app {
 	font-family: 'Avenir', Helvetica, Arial, sans-serif;

@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
-import Checkout from './views/Checkout.vue'
-import Shipping from './components/Checkout_Shipping.vue'
-import Billing from './components/Checkout_Billing.vue'
-import Payment from './components/Checkout_Payment.vue'
+import Home from './views/PageHome.vue'
+import Checkout from './views/PageCheckout.vue'
+import Shipping from './views/Checkout_Shipping.vue'
+import Billing from './views/Checkout_Billing.vue'
+import Payment from './views/Checkout_Payment.vue'
 
 Vue.use(Router)
 

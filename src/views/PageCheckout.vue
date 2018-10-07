@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import CheckoutSteps from '@/components/CheckoutSteps.vue'
-import OrderSummary from '@/components/OrderSummary.vue'
+import CheckoutSteps from '@/views/CheckoutStepsSection.vue'
+import OrderSummary from '@/views/OrderSummarySection.vue'
 
 export default {
 	components: {

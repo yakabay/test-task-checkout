@@ -1,6 +1,7 @@
 export default {
     products: [
         {
+            id: 1,
             name: 'The Chelsea Boot',
             desc: 'Black',
             img_url: '/img/products/chelsea_boot.png',
@@ -8,6 +9,7 @@ export default {
             quantity: 1,
         },
         {
+            id: 2,
             name: 'The Twill Snap Backpack',
             desc: 'Reverse Denim + Brown leather',
             img_url: '/img/products/backpack.png',
@@ -15,6 +17,7 @@ export default {
             quantity: 1,
         },
         {
+            id: 3,
             name: 'The Twill Zip Tote',
             desc: 'Reverse Denim + Brown leather',
             img_url: '/img/products/zip_tote.png',
