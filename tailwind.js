@@ -46,16 +46,15 @@ View the full documentation at https://tailwindcss.com.
 let colors = {
   'transparent': 'transparent',
   'primary': '#5A0F94',
-  'secondary': '#777777',
 
   'black': '#22292f',
-  'grey-darkest': '#3d4852',
+  'grey-darkest': '#2B2525',
   'grey-darker': '#606f7b',
-  'grey-dark': '#8795a1',
-  'grey': '#b8c2cc',
-  'grey-light': '#dae1e7',
-  'grey-lighter': '#F2F4F7',
-  'grey-lightest': '#f8fafc',
+  'grey-dark': '#777777',
+  'grey': '#999999',
+  'grey-light': '#ACACAC',
+  'grey-lighter': '#DEDCDC',
+  'grey-lightest': '#F2F4F7',
   'white': '#ffffff',
 
   'red-darkest': '#3b0d0c',

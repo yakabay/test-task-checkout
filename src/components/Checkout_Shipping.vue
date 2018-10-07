@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h2 class="section-title">Shipping Info</h2>
+		<h2 class="checkout-section-title">Shipping Info</h2>
 	</div>
 </template>
 

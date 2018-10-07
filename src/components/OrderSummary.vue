@@ -1,6 +1,9 @@
 <template>
-  	<div class="oderSummary bg-grey-lighter">
-    	<h1>Order summary</h1>
+  	<div class="oderSummary bg-grey-lightest pt-7 px-4 sm:px-12 lg:px-4">
+		<div class="flex justify-between items-baseline">
+			<h3 class="text-primary font-normal tracking-tight" style="font-size: 1.4rem">Order summary</h3>
+			<a href="#" class="text-md text-grey underline">edit order</a>
+		</div>
   	</div>
 </template>
 

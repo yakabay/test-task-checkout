@@ -32,7 +32,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.section-title {
+.checkout-section-title {
 	@apply text-4xl text-primary font-light text-left tracking-tight;
 }
 
@@ -42,11 +42,11 @@
 	-moz-osx-font-smoothing: grayscale;
 	min-height: 100vh;
 	background-color: #E6E9EF;
-	a {
-		text-decoration: none;
-	}
 }
 
+a {
+	text-decoration: none;
+}
 
 .header {
 	background: white;
