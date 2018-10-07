@@ -1,5 +1,5 @@
 <template>
-  	<div class="oderSummary">
+  	<div class="oderSummary bg-grey-lighter">
     	<h1>Order summary</h1>
   	</div>
 </template>
@@ -16,7 +16,6 @@ export default {
 
 <style scoped lang="scss">
 .oderSummary {
-	background-color: #F2F4F7;
 	border-top-right-radius: 5px;
 	border-top-left-radius: 5px;
 }
