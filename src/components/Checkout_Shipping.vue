@@ -1,6 +1,6 @@
 <template>
 	<div>
-		shipping
+		<h2 class="section-title">Shipping Info</h2>
 	</div>
 </template>
 

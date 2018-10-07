@@ -45,6 +45,8 @@ View the full documentation at https://tailwindcss.com.
 
 let colors = {
   'transparent': 'transparent',
+  'primary': '#5A0F94',
+  'secondary': '#777777',
 
   'black': '#22292f',
   'grey-darkest': '#3d4852',
@@ -252,6 +254,7 @@ module.exports = {
   textSizes: {
     'xs': '.75rem',     // 12px
     'sm': '.875rem',    // 14px
+    'md': '.9375rem',   // 15px
     'base': '1rem',     // 16px
     'lg': '1.125rem',   // 18px
     'xl': '1.25rem',    // 20px
@@ -476,8 +479,11 @@ module.exports = {
     '4': '1rem',
     '5': '1.25rem',
     '6': '1.5rem',
+    '7': '1.75rem',
     '8': '2rem',
+    '9': '2.25rem',
     '10': '2.5rem',
+    '11': '2.75rem',
     '12': '3rem',
     '16': '4rem',
     '24': '6rem',
@@ -524,8 +530,11 @@ module.exports = {
     '4': '1rem',
     '5': '1.25rem',
     '6': '1.5rem',
+    '7': '1.75rem',
     '8': '2rem',
+    '9': '2.25rem',
     '10': '2.5rem',
+    '11': '2.75rem',
     '12': '3rem',
     '16': '4rem',
     '24': '6rem',
@@ -651,8 +660,11 @@ module.exports = {
     '4': '1rem',
     '5': '1.25rem',
     '6': '1.5rem',
+    '7': '1.75rem',
     '8': '2rem',
+    '9': '2.25rem',
     '10': '2.5rem',
+    '11': '2.75rem',
     '12': '3rem',
     '16': '4rem',
     '20': '5rem',
@@ -686,8 +698,11 @@ module.exports = {
     '4': '1rem',
     '5': '1.25rem',
     '6': '1.5rem',
+    '7': '1.75rem',
     '8': '2rem',
+    '9': '2.25rem',
     '10': '2.5rem',
+    '11': '2.75rem',
     '12': '3rem',
     '16': '4rem',
     '20': '5rem',

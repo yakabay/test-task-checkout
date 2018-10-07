@@ -3,7 +3,7 @@
 		<dir>
 			<img alt="Vue logo" src="../assets/logo.png">
 			<h2>This test app is made with Vue.js</h2>
-			<h3>Please navigate to <router-link to="/checkout">Cart</router-link> to play with it )</h3>
+			<h3>Please navigate to <router-link to="/checkout/shipping">Cart</router-link> to play with it )</h3>
 		</dir>
  	</div>
 </template>

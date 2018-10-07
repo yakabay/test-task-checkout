@@ -1,9 +1,11 @@
 <template>
-  	<div class="checkoutSteps">
-    	<nav>
-			<router-link to="/checkout/shipping">Shipping</router-link>
-			<router-link to="/checkout/billing">Billing</router-link>
-			<router-link to="/checkout/payment">Payment</router-link>
+  	<div class="checkoutSteps px-12 pt-6 pb-12">
+    	<nav class="flex items-center h-6 mb-7">
+			<router-link to="/checkout/shipping" class="text-secondary text-md">Shipping</router-link>
+			<img src="@/assets/img/arrow-right.svg" class="px-4 h-full opacity-25">
+			<router-link to="/checkout/billing" class="text-secondary text-md">Billing</router-link>
+			<img src="@/assets/img/arrow-right.svg" class="px-4 h-full opacity-25">
+			<router-link to="/checkout/payment" class="text-secondary text-md">Payment</router-link>
 		</nav>
 		<router-view/>
   	</div>
@@ -24,6 +26,9 @@ export default {
 	background-color: white;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
+	.router-link-exact-active {
+		color: #5A0F94;
+	}
 }
 @media only screen and (min-width: 992px) {
 	.checkoutSteps {

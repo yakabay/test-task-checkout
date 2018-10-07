@@ -6,7 +6,7 @@
 					<div class="col-xs-11 col-xl-9" style="height: 100%">
 						<div class="header__container" style="height: 100%">
 							<router-link to="/">Home</router-link>
-							<router-link to="/checkout">Cart</router-link>
+							<router-link to="/checkout/shipping">Cart</router-link>
 						</div>
 					</div>
 				</div>
@@ -32,13 +32,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.section-title {
+	@apply text-4xl text-primary font-light text-left tracking-tight;
+}
+
 #app {
 	font-family: 'Avenir', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	min-height: 100vh;
 	background-color: #E6E9EF;
-	color: #2c3e50;
+	a {
+		text-decoration: none;
+	}
 }
 
 
