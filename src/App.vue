@@ -46,20 +46,17 @@ body {
 	.title-3xl {
 		@apply text-3xl text-primary font-light text-left tracking-tight mb-6;
 	}
-	@screen lg {
-		.title-3xl {
-			@apply text-4xl;
-		}
-	}
-
 	.title-2xl {
 		@apply text-primary text-2xl font-normal tracking-tight;
 	}
 	.el-input {
 		&__inner {
-			@apply block border border-grey-lighter rounded text-xl text-grey-darkest w-full px-4 py-2 h-auto outline-none;
+			@apply block border border-grey-lighter rounded text-lg text-grey-darkest w-full px-4 py-2 h-auto outline-none;
 			line-height: 1.6;
 		}
+	}
+	.el-select {
+		width: 100%;
 	}
 	.el-button {
 		@apply border rounded bg-purple border-purple-darker text-xl text-center text-white font-semibold px-2 py-4;
@@ -75,13 +72,30 @@ body {
 		@apply text-grey-darker;
 		opacity: 1;
 	}
+
+	@screen lg {
+		.title-3xl {
+			@apply text-4xl;
+		}
+		.el-input__inner {
+			@apply text-xl;
+		}
+	}
 }
+
 
 .el-select-dropdown {
 	.el-select-dropdown__item {
-		@apply text-grey-dark text-xl font-light;
+		@apply text-grey-dark text-lg font-light;
 		&.selected {
 			@apply text-grey-dark font-medium;
+		}
+	}
+}
+@screen lg {
+	.el-select-dropdown {
+		.el-select-dropdown__item {
+			@apply text-xl;
 		}
 	}
 }

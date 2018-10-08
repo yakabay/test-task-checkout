@@ -31,6 +31,7 @@
 		></el-input>
 
 		<el-input class="mb-6"
+			:suffix-icon=" city === '' ? 'target-icon' : 'target-icon opacity-50' " 
 			placeholder="City" 
 			v-model="city"
 		></el-input>
@@ -82,5 +83,14 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
+.target-icon {
+	background-image: url('/img/target.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+	height: 1.7rem;
+	top: 12px;
+	right: 9px;
+}
 </style>
