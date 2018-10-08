@@ -114,9 +114,9 @@ let colors = {
   'indigo-lightest': '#e6e8ff',
 
   'purple-darkest': '#21183c',
-  'purple-darker': '#382b5f',
-  'purple-dark': '#794acf',
-  'purple': '#9561e2',
+  'purple-darker': '#4E226B',
+  'purple-dark': '#5A0F94',
+  'purple': '#7A3FA8',
   'purple-light': '#a779e9',
   'purple-lighter': '#d6bbfc',
   'purple-lightest': '#f3ebff',
@@ -471,6 +471,7 @@ module.exports = {
 
   width: {
     'auto': 'auto',
+    'fit': 'fit-content',
     'px': '1px',
     '1': '0.25rem',
     '2': '0.5rem',
