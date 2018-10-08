@@ -33,39 +33,56 @@
 @tailwind utilities;
 @tailwind screens;
 
-#app {
+body {
 	font-family: 'Avenir', Helvetica, Arial, sans-serif;
+}
+
+#app {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	min-height: 100vh;
 	background-color: #E6E9EF;
-}
 
-.title-3xl {
-	@apply text-3xl text-primary font-light text-left tracking-tight mb-6;
-}
-@screen lg {
 	.title-3xl {
-		@apply text-4xl;
+		@apply text-3xl text-primary font-light text-left tracking-tight mb-6;
+	}
+	@screen lg {
+		.title-3xl {
+			@apply text-4xl;
+		}
+	}
+
+	.title-2xl {
+		@apply text-primary text-2xl font-normal tracking-tight;
+	}
+	.el-input {
+		&__inner {
+			@apply block border border-grey-lighter rounded text-xl text-grey-darkest w-full px-4 py-2 h-auto outline-none;
+			line-height: 1.6;
+		}
+	}
+	.el-button {
+		@apply border rounded bg-purple border-purple-darker text-xl text-center text-white font-semibold px-2 py-4;
+		width: 14.2rem;
+		&:focus {
+			outline: none;
+		}
+		&--default {
+			@apply bg-purple border-purple-darker;
+		}
+	}
+	::placeholder { 
+		@apply text-grey-darker;
+		opacity: 1;
 	}
 }
 
-.title-2xl {
-	@apply text-primary text-2xl font-normal tracking-tight;
-}
-.el-input {
-	&__inner {
-		@apply block border border-grey-lighter rounded text-xl text-grey-darkest w-full px-4 py-3 outline-none;
-	}
-}
-.el-button {
-	@apply border rounded bg-purple border-purple-darker text-xl text-center text-white font-semibold px-2 py-4;
-	width: 14.2rem;
-	&:focus {
-		outline: none;
-	}
-	&--default {
-		@apply bg-purple border-purple-darker;
+.el-select-dropdown {
+	.el-select-dropdown__item {
+		@apply text-grey-dark text-xl font-light;
+		&.selected {
+			@apply text-grey-dark font-medium;
+		}
 	}
 }
 

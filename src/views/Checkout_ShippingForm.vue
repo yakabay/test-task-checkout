@@ -8,10 +8,12 @@
 			v-model="fullName"
 		></el-input>
 		<div class="flex items-center mb-10">
-			<el-input class="w-3/5"
-				placeholder="Daytime Phone" 
-				v-model="phoneNumber"
-			></el-input>
+			<div class="w-3/5">
+				<el-input
+					placeholder="Daytime Phone" 
+					v-model="phoneNumber"
+				></el-input>
+			</div>
 			<div class="text-grey-dark leading-none w-2/5 ml-3">
 				For delivery
 				<br>questions only
@@ -33,22 +35,26 @@
 			v-model="city"
 		></el-input>
 		<div class="flex items-center mb-6">
-			<el-select class="w-3/5" 
-				v-model="country" 
-				placeholder="Country"
-				filterable
-			>
+			<div class="w-3/5">
+				<el-select 
+					v-model="country" 
+					placeholder="Country"
+					filterable
+				>
 					<el-option
 							v-for="item in countries"
 							:key="item"
 							:label="item"
 							:value="item">
 					</el-option>
-			</el-select>
-			<el-input class="text-grey-dark leading-none w-2/5 ml-6"
-				placeholder="ZIP" 
-				v-model="zipCode"
-			></el-input>
+				</el-select>
+			</div>
+			<div class="w-2/5 ml-6">
+				<el-input
+					placeholder="ZIP" 
+					v-model="zipCode"
+				></el-input>
+			</div>
 		</div>
 		 <el-button>Continue</el-button>
 
