@@ -53,6 +53,14 @@ body {
 		&__inner {
 			@apply block border border-grey-lighter rounded text-lg text-grey-darkest w-full px-4 py-2 h-auto outline-none;
 			line-height: 1.6;
+			&:focus {
+				@apply shadow-plain;
+			}
+		}
+	}
+	.error {
+		.el-input__inner {
+			@apply bg-yellow-lightest;
 		}
 	}
 	.el-select {
@@ -97,6 +105,14 @@ body {
 		.el-select-dropdown__item {
 			@apply text-xl;
 		}
+	}
+}
+.el-tooltip__popper.is-light {
+	@apply text-md text-red shadow;
+	border: 1px solid #DEDCDC !important;
+	.popper__arrow {
+		@apply border-none shadow;
+		border: 1px solid #DEDCDC !important;
 	}
 }
 

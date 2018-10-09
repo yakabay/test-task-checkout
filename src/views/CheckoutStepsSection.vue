@@ -1,11 +1,22 @@
 <template>
   	<div class="checkoutSteps px-4 sm:px-12 pt-6 pb-12">
     	<nav class="flex items-center h-6 mb-7">
-			<router-link to="/checkout/shipping" class="text-grey-light text-md">Shipping</router-link>
+			<router-link class="text-grey-light text-md"
+				to="/checkout/shipping" 
+			>Shipping</router-link>
+
 			<img src="@/assets/img/arrow-right.svg" class="px-4 h-full opacity-50">
-			<router-link to="/checkout/billing" class="text-grey-light text-md">Billing</router-link>
+
+			<router-link class="text-grey-light text-md"
+				to="/checkout/billing" 
+				:event="true ? '' : click"
+			>Billing</router-link>
+
 			<img src="@/assets/img/arrow-right.svg" class="px-4 h-full opacity-50">
-			<router-link to="/checkout/payment" class="text-grey-light text-md">Payment</router-link>
+
+			<router-link class="text-grey-light text-md"
+				to="/checkout/payment" 
+			>Payment</router-link>
 		</nav>
 		<router-view/>
   	</div>
@@ -15,7 +26,6 @@
 export default {
 	data() {
 		return {
-			name: 'Steps',
 		}
 	},
 }

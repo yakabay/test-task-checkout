@@ -79,7 +79,7 @@ let colors = {
   'yellow': '#ffed4a',
   'yellow-light': '#fff382',
   'yellow-lighter': '#fff9c2',
-  'yellow-lightest': '#fcfbeb',
+  'yellow-lightest': '#FEFDEF',
 
   'green-darkest': '#0f2f21',
   'green-darker': '#1a4731',
@@ -762,7 +762,8 @@ module.exports = {
   */
 
   shadows: {
-    default: '0 2px 4px 0 rgba(0,0,0,0.10)',
+    default: '0 1px 4px 3px rgba(0,0,0,0.10)',
+    'plain': '0 0 0 2px #EDEFF4',
     'md': '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
     'lg': '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
     'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
