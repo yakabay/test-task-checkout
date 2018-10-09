@@ -1,5 +1,3 @@
-import { runInThisContext } from "vm";
-
 export class Errors {
     constructor() {
         this.errorMessages = ''

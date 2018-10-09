@@ -4,32 +4,32 @@
 
 		<h3 class="title-2xl mb-1">Recipient</h3>
 		<el-tooltip 
-			:disabled="!errors.contains('fullName')" 
+			:disabled="!shippingErrors.contains('fullName')" 
 			content="Please enter recepient full name" 
 			placement="top-start" 
 			effect="light"
 			:open-delay=500>
 			<el-input class="mb-3"
-				:class="{'error': errors.contains('fullName')}"
-				@input="errors.clearField('fullName')"
+				:class="{'error': shippingErrors.contains('fullName')}"
+				@input="shippingErrors.clearField('fullName')"
 				placeholder="Full Name" 
-				v-model="shippingData.fullName">
+				v-model="fullName">
 			</el-input>
 		</el-tooltip>
 		
 		<div class="flex items-center mb-10">
 			<div class="w-3/5">
 				<el-tooltip 
-					:disabled="!errors.contains('phoneNumber')" 
+					:disabled="!shippingErrors.contains('phoneNumber')" 
 					content="Please enter recepient phone number" 
 					placement="top-start" 
 					effect="light"
 					:open-delay=500>
 					<el-input
-						:class="{'error': errors.contains('phoneNumber')}"
-						@input="errors.clearField('phoneNumber')"
+						:class="{'error': shippingErrors.contains('phoneNumber')}"
+						@input="shippingErrors.clearField('phoneNumber')"
 						placeholder="Daytime Phone" 
-						v-model="shippingData.phoneNumber">
+						v-model="phoneNumber">
 					</el-input>
 				</el-tooltip>
 			</div>
@@ -41,58 +41,58 @@
 
 		<h3 class="title-2xl mb-1">Address</h3>
 		<el-tooltip 
-			:disabled="!errors.contains('sreetAddress')" 
+			:disabled="!shippingErrors.contains('streetAddress')" 
 			content="Please enter recepient sreet address" 
 			placement="top-start" 
 			effect="light"
 			:open-delay=500>
 			<el-input class="mb-3"
-				:class="{'error': errors.contains('sreetAddress')}"
-				@input="errors.clearField('sreetAddress')"
+				:class="{'error': shippingErrors.contains('streetAddress')}"
+				@input="shippingErrors.clearField('streetAddress')"
 				placeholder="Street Address" 
-				v-model="shippingData.sreetAddress">
+				v-model="streetAddress">
 			</el-input>
 		</el-tooltip>
 		<el-tooltip 
-			:disabled="!errors.contains('addressDetails')" 
+			:disabled="!shippingErrors.contains('addressDetails')" 
 			content="Please enter recepient address details" 
 			placement="top-start" 
 			effect="light"
 			:open-delay=500>
 			<el-input class="mb-6"
-				:class="{'error': errors.contains('addressDetails')}"
-				@input="errors.clearField('addressDetails')"
+				:class="{'error': shippingErrors.contains('addressDetails')}"
+				@input="shippingErrors.clearField('addressDetails')"
 				placeholder="Apt, Suite, Bldg, Gate Code: (optional)" 
-				v-model="shippingData.addressDetails">
+				v-model="addressDetails">
 			</el-input>
 		</el-tooltip>
 
 		<el-tooltip 
-			:disabled="!errors.contains('city')" 
+			:disabled="!shippingErrors.contains('city')" 
 			content="Please enter recepient city" 
 			placement="top-start" 
 			effect="light"
 			:open-delay=500>
 			<el-input class="mb-6"
-				:class="{'error': errors.contains('city')}"
-				@input="errors.clearField('city')"
-				:suffix-icon=" shippingData.city === '' ? 'target-icon' : 'target-icon opacity-50' " 
+				:class="{'error': shippingErrors.contains('city')}"
+				@input="shippingErrors.clearField('city')"
+				:suffix-icon=" city === '' ? 'target-icon' : 'target-icon opacity-50' " 
 				placeholder="City" 
-				v-model="shippingData.city">
+				v-model="city">
 			</el-input>
 		</el-tooltip>
 		<div class="flex items-center mb-6">
 			<div class="w-3/5">
 				<el-tooltip 
-					:disabled="!errors.contains('country')" 
+					:disabled="!shippingErrors.contains('country')" 
 					content="Please enter recepient country" 
 					placement="top-start" 
 					effect="light"
 					:open-delay=500>
 					<el-select
-						:class="{'error': errors.contains('country')}"
-						@input="errors.clearField('country')"
-						v-model="shippingData.country" 
+						:class="{'error': shippingErrors.contains('country')}"
+						@input="shippingErrors.clearField('country')"
+						v-model="country" 
 						placeholder="Country"
 						filterable>
 						<el-option
@@ -106,16 +106,16 @@
 			</div>
 			<div class="w-2/5 ml-6">
 				<el-tooltip 
-					:disabled="!errors.contains('zipCode')" 
+					:disabled="!shippingErrors.contains('zipCode')" 
 					content="Please enter recepient zip code" 
 					placement="top-start" 
 					effect="light"
 					:open-delay=500>
 					<el-input
-						:class="{'error': errors.contains('zipCode')}"
-						@input="errors.clearField('zipCode')"
+						:class="{'error': shippingErrors.contains('zipCode')}"
+						@input="shippingErrors.clearField('zipCode')"
 						placeholder="ZIP" 
-						v-model="shippingData.zipCode">
+						v-model="zipCode">
 					</el-input>
 				</el-tooltip>
 			</div>
@@ -129,34 +129,91 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-import { Errors } from '@/helpers'
+import { mapState, mapMutations, mapActions } from 'vuex'
 
 export default {
 	data() {
 		return {
-			shippingData: {
-				fullName: '',
-				phoneNumber: '',
-				sreetAddress: '',
-				addressDetails: '',
-				city: '',
-				country: '',
-				zipCode: '',
-			},
-			errors: new Errors(),
 		}
 	},
 	computed: {
-		...mapState(['countries']),
-		tt() {
-			return this.errors.test()
-		}
+		...mapState([
+			'countries',
+			'shippingData',
+			'shippingErrors',
+			'billingData',
+			'billingErrors',
+		]),
+		fullName: {
+			get() {
+				return this.$store.state.shippingData.fullName
+			},
+			set(value) { 
+				this.updateShippingDataFullName(value) 
+			}
+		},
+		phoneNumber: {
+			get() {
+				return this.$store.state.shippingData.phoneNumber
+			},
+			set(value) { 
+				this.updateShippingDataPhoneNumber(value) 
+			}
+		},
+		streetAddress: {
+			get() {
+				return this.$store.state.shippingData.streetAddress
+			},
+			set(value) { 
+				this.updateShippingDataStreetAddress(value) 
+			}
+		},
+		addressDetails: {
+			get() {
+				return this.$store.state.shippingData.addressDetails
+			},
+			set(value) { 
+				this.updateShippingDataAddressDetails(value) 
+			}
+		},
+		city: {
+			get() {
+				return this.$store.state.shippingData.city
+			},
+			set(value) { 
+				this.updateShippingDataCity(value) 
+			}
+		},
+		country: {
+			get() {
+				return this.$store.state.shippingData.country
+			},
+			set(value) { 
+				this.updateShippingDataCountry(value) 
+			}
+		},
+		zipCode: {
+			get() {
+				return this.$store.state.shippingData.zipCode
+			},
+			set(value) { 
+				this.updateShippingDataZipCode(value) 
+			}
+		},
 	},
 	methods: {
+		...mapMutations([
+			'updateShippingDataFullName',
+			'updateShippingDataPhoneNumber',
+			'updateShippingDataStreetAddress',
+			'updateShippingDataAddressDetails',
+			'updateShippingDataCity',
+			'updateShippingDataCountry',
+			'updateShippingDataZipCode',
+		]),
 		tryToContinue() {
-			this.errors.check(this.shippingData)
-			if (this.errors.absent()) {
+			this.shippingErrors.check(this.shippingData)
+			if (this.shippingErrors.absent()) {
 				console.log('Good! No Errors')
 			}
 		}
