@@ -44,7 +44,7 @@ body {
 	background-color: #E6E9EF;
 
 	.title-3xl {
-		@apply text-3xl text-primary font-light text-left tracking-tight mb-6;
+		@apply text-3xl text-primary font-light tracking-tight mb-6;
 	}
 	.title-2xl {
 		@apply text-primary text-2xl font-normal tracking-tight;
@@ -143,6 +143,7 @@ a {
 .card {
 	background-color: white;
 	margin-top: 3.6rem;
+	margin-bottom: 3.6rem;
 	border-radius: 6px;
 	box-shadow: 0px 2px 20px 4px rgba(221,221,221,1);
 }

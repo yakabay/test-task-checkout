@@ -27,8 +27,15 @@ export default new Vuex.Store({
 			country: '',
 			zipCode: '',
 		},
+		paymentData: {
+			cardholderName: '',
+			cardNumber: '',
+			expireDate: '',
+			securityCode: '',
+		},
 		shippingErrors: new Errors(),
 		billingErrors: new Errors(),
+		paymentErrors: new Errors(),
 	},
 	getters: {
 		allShippingFieldsAreFilled(state) {
@@ -66,6 +73,11 @@ export default new Vuex.Store({
 		updateBillingDataCity(state, value) { state.billingData = {...state.billingData, city: value} },
 		updateBillingDataCountry(state, value) { state.billingData = {...state.billingData, country: value} },
 		updateBillingDataZipCode(state, value) { state.billingData = {...state.billingData, zipCode: value} },
+		
+		updatePaymentDataCardholderName(state, value) { state.paymentData = {...state.paymentData, cardholderName: value} },
+		updatePaymentDataCardNumber(state, value) { state.paymentData = {...state.paymentData, cardNumber: value} },
+		updatePaymentDataExpireDate(state, value) { state.paymentData = {...state.paymentData, expireDate: value} },
+		updatePaymentDataSecurityCode(state, value) { state.paymentData = {...state.paymentData, securityCode: value} },
 	},
 	actions: {
 		checkShippingErrors({ state }) {
@@ -73,6 +85,9 @@ export default new Vuex.Store({
 		},
 		checkBillingErrors({ state }) {
 			state.billingErrors.check(state.billingData)
+		},
+		checkPaymentErrors({ state }) {
+			state.paymentErrors.check(state.paymentData)
 		}
 	}
 })
