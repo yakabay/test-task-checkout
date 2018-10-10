@@ -8,8 +8,9 @@
 			<img src="@/assets/img/arrow-right.svg" class="px-4 h-full opacity-50">
 
 			<router-link class="text-grey-light text-md"
-				to="/checkout/billing" 
-				:event="true ? '' : click"
+				:class="{'cursor-default': !allShippingFieldsAreFilled}"
+				to="/checkout/billing"
+				:event="allShippingFieldsAreFilled ? 'click' : ''"
 			>Billing</router-link>
 
 			<img src="@/assets/img/arrow-right.svg" class="px-4 h-full opacity-50">
@@ -23,10 +24,15 @@
 </template>
 
 <script>
+import { mapState, mapGetters } from 'vuex'
 export default {
 	data() {
 		return {
 		}
+	},
+	computed: {
+		...mapState(['shippingErrors']),
+		...mapGetters(['allShippingFieldsAreFilled']),
 	},
 }
 </script>

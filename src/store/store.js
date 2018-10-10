@@ -21,6 +21,17 @@ export default new Vuex.Store({
 		shippingErrors: new Errors(),
 		billingErrors: new Errors(),
 	},
+	getters: {
+		allShippingFieldsAreFilled(state) {
+			for (let prop in state.shippingData) {
+				let trimmedValue = state.shippingData[prop].trim()
+				if (trimmedValue == '') {
+					return false;
+				}
+			}
+			return true;
+		}
+	},
 	mutations: {
 		updateShippingDataFullName(state, value) { state.shippingData = {...state.shippingData, fullName: value} },
 		updateShippingDataPhoneNumber(state, value) { state.shippingData = {...state.shippingData, phoneNumber: value} },
@@ -31,6 +42,8 @@ export default new Vuex.Store({
 		updateShippingDataZipCode(state, value) { state.shippingData = {...state.shippingData, zipCode: value} },
 	},
 	actions: {
-
+		checkShippingErrors({ state }) {
+			state.shippingErrors.check(state.shippingData)
+		}
 	}
 })

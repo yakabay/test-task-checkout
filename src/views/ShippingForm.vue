@@ -121,7 +121,7 @@
 			</div>
 		</div>
 		<el-button
-			@click="tryToContinue">
+			@click="validateFormAndContinue">
 			Continue
 		</el-button>
 
@@ -137,68 +137,34 @@ export default {
 		}
 	},
 	computed: {
-		...mapState([
-			'countries',
-			'shippingData',
-			'shippingErrors',
-			'billingData',
-			'billingErrors',
-		]),
+		...mapState(['countries', 'shippingData', 'shippingErrors',]),
 		fullName: {
-			get() {
-				return this.$store.state.shippingData.fullName
-			},
-			set(value) { 
-				this.updateShippingDataFullName(value) 
-			}
+			get() { return this.$store.state.shippingData.fullName },
+			set(value) { this.updateShippingDataFullName(value) }
 		},
 		phoneNumber: {
-			get() {
-				return this.$store.state.shippingData.phoneNumber
-			},
-			set(value) { 
-				this.updateShippingDataPhoneNumber(value) 
-			}
+			get() { return this.$store.state.shippingData.phoneNumber },
+			set(value) { this.updateShippingDataPhoneNumber(value) }
 		},
 		streetAddress: {
-			get() {
-				return this.$store.state.shippingData.streetAddress
-			},
-			set(value) { 
-				this.updateShippingDataStreetAddress(value) 
-			}
+			get() { return this.$store.state.shippingData.streetAddress },
+			set(value) { this.updateShippingDataStreetAddress(value) }
 		},
 		addressDetails: {
-			get() {
-				return this.$store.state.shippingData.addressDetails
-			},
-			set(value) { 
-				this.updateShippingDataAddressDetails(value) 
-			}
+			get() { return this.$store.state.shippingData.addressDetails },
+			set(value) { this.updateShippingDataAddressDetails(value) }
 		},
 		city: {
-			get() {
-				return this.$store.state.shippingData.city
-			},
-			set(value) { 
-				this.updateShippingDataCity(value) 
-			}
+			get() { return this.$store.state.shippingData.city },
+			set(value) { this.updateShippingDataCity(value) }
 		},
 		country: {
-			get() {
-				return this.$store.state.shippingData.country
-			},
-			set(value) { 
-				this.updateShippingDataCountry(value) 
-			}
+			get() { return this.$store.state.shippingData.country },
+			set(value) { this.updateShippingDataCountry(value) }
 		},
 		zipCode: {
-			get() {
-				return this.$store.state.shippingData.zipCode
-			},
-			set(value) { 
-				this.updateShippingDataZipCode(value) 
-			}
+			get() { return this.$store.state.shippingData.zipCode },
+			set(value) { this.updateShippingDataZipCode(value) }
 		},
 	},
 	methods: {
@@ -211,10 +177,11 @@ export default {
 			'updateShippingDataCountry',
 			'updateShippingDataZipCode',
 		]),
-		tryToContinue() {
-			this.shippingErrors.check(this.shippingData)
+		...mapActions(['checkShippingErrors']),
+		validateFormAndContinue() {
+			this.checkShippingErrors()
 			if (this.shippingErrors.absent()) {
-				console.log('Good! No Errors')
+				this.$router.push({ path: '/checkout/billing' })
 			}
 		}
 	}
