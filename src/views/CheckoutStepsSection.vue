@@ -16,7 +16,9 @@
 			<img src="@/assets/img/arrow-right.svg" class="px-4 h-full opacity-50">
 
 			<router-link class="text-grey-light text-md"
+				:class="{'cursor-default': !allShippingFieldsAreFilled || !allBillingFieldsAreFilled }"
 				to="/checkout/payment" 
+				:event="allShippingFieldsAreFilled && allBillingFieldsAreFilled ? 'click' : ''"
 			>Payment</router-link>
 		</nav>
 		<router-view/>
@@ -32,7 +34,7 @@ export default {
 	},
 	computed: {
 		...mapState(['shippingErrors']),
-		...mapGetters(['allShippingFieldsAreFilled']),
+		...mapGetters(['allShippingFieldsAreFilled', 'allBillingFieldsAreFilled']),
 	},
 }
 </script>

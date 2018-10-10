@@ -189,13 +189,4 @@ export default {
 </script>
 
 <style lang="scss">
-.target-icon {
-	background-image: url('/img/target.png');
-	background-repeat: no-repeat;
-	background-size: contain;
-	position: absolute;
-	height: 1.7rem;
-	top: 12px;
-	right: 9px;
-}
 </style>
