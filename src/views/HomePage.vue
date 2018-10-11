@@ -6,7 +6,7 @@
 				This test app is made with Vue.js
 			</h2>
 			<h3 class="text-xl text-grey-darkest font-medium py-2">
-				Navigate to <router-link to="/checkout/shipping" class="font-semibold">Cart</router-link> cart to try it out )
+				Navigate to <router-link to="/checkout/shipping" class="font-semibold">Cart</router-link> to try it out )
 			</h3>
 		</div>
  	</div>
