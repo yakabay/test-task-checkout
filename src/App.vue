@@ -1,16 +1,17 @@
 <template>
 	<div id="app">
-		<header class="header">
+		<header class="bg-white fixed w-full z-10" style="height: 3.825rem;">
 			<div class="container">
 				<div class="row center-xs" style="height: 100%">
 					<div class="col-xs-11 col-xl-9" style="height: 100%">
-						<div class="header__container" style="height: 100%">
-							<router-link to="/">Home</router-link>
-							<router-link to="/checkout/shipping">Cart</router-link>
+						<div class="flex justify-between items-center" style="height: 100%">
+							<router-link to="/" class="text-2xl font-thin">Front-end Developer Test Task</router-link>
+							<router-link to="/checkout/shipping"  class="text-xl" style="color: #C90EA5;">cart</router-link>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="gradient"></div>
 			
 		</header>
 
@@ -74,6 +75,9 @@ body {
 		}
 		&--default {
 			@apply bg-purple border-purple-darker;
+			&:hover {
+				@apply bg-purple-light;
+			}
 		}
 	}
 	::placeholder { 
@@ -130,19 +134,16 @@ a {
 	text-decoration: none;
 }
 
-.header {
-	background: white;
-	height: 3.825rem;
-	&__container {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
+.gradient {
+	height: 1px;
+	background: rgba(235,182,232,1);
+	background: linear-gradient(to right, rgba(235,182,232,1) 0%, rgba(255,186,214,1) 48%, rgba(217,178,249,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebb6e8', endColorstr='#d9b2f9', GradientType=1 );
 }
 
 .card {
 	background-color: white;
-	margin-top: 3.6rem;
+	margin-top: 7.425rem;
 	margin-bottom: 3.6rem;
 	border-radius: 6px;
 	box-shadow: 0px 2px 20px 4px rgba(221,221,221,1);
