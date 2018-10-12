@@ -5,8 +5,14 @@
 				<div class="row center-xs" style="height: 100%">
 					<div class="col-xs-11 col-xl-9" style="height: 100%">
 						<div class="flex justify-between items-center" style="height: 100%">
-							<router-link to="/" class="text-2xl font-thin">Front-end Developer Test Task</router-link>
-							<router-link to="/checkout/shipping"  class="text-xl" style="color: #C90EA5;">cart</router-link>
+							<router-link to="/" class="flex items-center">
+								<img src="@/assets/img/t-logo.png" alt="logo" class="h-8">
+								<span class="text-2xl font-thin pl-3 pt-1">Front-end Developer Test Task</span>
+							</router-link>
+							<router-link to="/checkout/shipping" class="flex items-center">
+								<span class="text-pink-dark text-xl pr-1">cart</span>
+								<cart-icon/>
+							</router-link>
 						</div>
 					</div>
 				</div>
@@ -27,6 +33,16 @@
 		
 	</div>
 </template>
+
+<script>
+import CartIcon from '@/components/CartIcon.vue'
+
+export default {
+	components: {
+		'cart-icon': CartIcon,
+	},
+}
+</script>
 
 <style lang="scss">
 @tailwind preflight;

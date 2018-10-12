@@ -55,6 +55,9 @@ export default new Vuex.Store({
 				}
 			}
 			return true;
+		},
+		countOfCartProducts(state) {
+			return state.cartProducts.length
 		}
 	},
 	mutations: {
