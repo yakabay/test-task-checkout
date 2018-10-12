@@ -1,7 +1,7 @@
 <template>
 	<div class="relative pr-1">
 		<img src="@/assets/img/cart.svg" alt="Cart Icon" class="h-6">
-		<div v-if="!countOfCartProducts" class="badge text-xs text-white font-semibold rounded-full absolute" style="background-color: #FF1876;">
+		<div v-if="countOfCartProducts" class="badge text-xs text-white font-semibold rounded-full absolute" style="background-color: #FF1876;">
 			{{ countOfCartProducts }}
 		</div>
 	</div>

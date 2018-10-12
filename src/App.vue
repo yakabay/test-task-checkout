@@ -92,8 +92,9 @@ body {
 		&--default {
 			@apply bg-purple border-purple-darker;
 			&:hover {
-				@apply bg-purple-light;
+				@apply bg-purple-light border-purple;
 			}
+			transition: background-color .3s ease;
 		}
 	}
 	::placeholder { 
