@@ -1,4 +1,4 @@
-# test-stamax
+# test-task-checkout
 
 ## Project setup
 ```
