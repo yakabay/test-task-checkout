@@ -112,7 +112,7 @@ body {
 	}
 
 	.target-icon {
-		background-image: url('/img/target.png');
+		background-image: url('./assets/img/target.png'); 
 		background-repeat: no-repeat;
 		background-size: contain;
 		position: absolute;
