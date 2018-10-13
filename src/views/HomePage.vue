@@ -11,6 +11,10 @@
 					cart
 				</router-link> to play with it )
 			</h3>
+			<h3 class="text-xl text-grey-dark font-medium py-2">
+				To view source code go to 
+				<a href="https://github.com/yakabay/test-task-checkout" target="_blank">GitHub</a>
+			</h3>
 		</div>
 	</div>
 </template>

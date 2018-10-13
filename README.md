@@ -1,26 +1,6 @@
 # test-task-checkout
 
-## Project setup
-```
-npm install
-```
+You can view this project on GitHub pages:
+https://yakabay.github.io/test-task-checkout/
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
