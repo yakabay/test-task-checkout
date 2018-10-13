@@ -120,11 +120,11 @@
 				</el-tooltip>
 			</div>
 		</div>
+
 		<el-button
 			@click="validateFormAndContinue">
 			Continue
 		</el-button>
-
 	</div>
 </template>
 

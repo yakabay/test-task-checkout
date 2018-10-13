@@ -31,7 +31,7 @@
 				v-model="cardNumber">
 			</el-input>
 		</el-tooltip>
-		
+
 
 		<div class="flex items-center mb-10">
 			<div class="w-32">
@@ -66,11 +66,11 @@
 				</el-tooltip>
 			</div>
 		</div>
+
 		<el-button
 			@click="validateFormAndContinue">
 			Pay Securely
 		</el-button>
-
 	</div>
 </template>
 

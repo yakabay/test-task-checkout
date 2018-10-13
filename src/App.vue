@@ -17,15 +17,19 @@
 					</div>
 				</div>
 			</div>
-			<div class="gradient"></div>
-			
-		</header>
 
-		<main class="container">
-			<div class="row center-xs" style="height: 100%; text-align: initial">
-				<div class="col-xs-11 col-md-9 col-lg-11 col-xl-9" style="height: 100%">
-					<div class="card">
-						<router-view/>
+			<div class="gradient"></div>
+		</header>
+		
+		<main>
+			<div class="container">
+				<div class="row center-xs" style="height: 100%; text-align: initial">
+					<div class="col-xs-11 col-md-9 col-lg-11 col-xl-9" style="height: 100%">
+						<div class="relative">
+							<transition name="el-fade-in-linear">
+								<router-view class="card absolute"/>
+							</transition>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -57,8 +61,6 @@ body {
 #app {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	min-height: 100vh;
-	background-color: #E6E9EF;
 
 	.title-3xl {
 		@apply text-3xl text-primary font-light tracking-tight mb-6;
@@ -102,12 +104,24 @@ body {
 		opacity: 1;
 	}
 
+	.shipping-form, .billing-form {
+		height: 580px;
+	}
+	.payment-form {
+		height: 439px;
+	}
 	@screen lg {
 		.title-3xl {
 			@apply text-4xl;
 		}
 		.el-input__inner {
 			@apply text-xl;
+		}
+		.shipping-form, .billing-form {
+			height: 608px;
+		}
+		.payment-form {
+			height: 455px;
 		}
 	}
 
@@ -159,17 +173,40 @@ a {
 }
 
 .card {
+	width: 100%;
 	background-color: white;
 	margin-top: 7.425rem;
 	margin-bottom: 3.6rem;
 	border-radius: 6px;
 	box-shadow: 0px 2px 20px 4px rgba(221,221,221,1);
 }
+main {
+	height: 100vh;
+	width: 100vw;
+	overflow: auto;
+	position: fixed;
+	background-color: #E6E9EF;
+}
+/* Scroll Appearance */
+::-webkit-scrollbar {
+			display: block;
+			width: 6px;
+}
+
+/* Scroll Track */
+::-webkit-scrollbar-track {
+			background: rgb(235, 241, 243); 
+}
+
+/* Scroll Handle */
+::-webkit-scrollbar-thumb {
+			background: #888; 
+}
 
 .container {
 	height: 100%;
 	max-width: 100%;
-}
+}	
 @media only screen and (min-width: 576px) {
 	.container {
 		width: 560px;

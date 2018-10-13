@@ -21,6 +21,7 @@
 				:event="allShippingFieldsAreFilled && allBillingFieldsAreFilled ? 'click' : ''"
 			>Payment</router-link>
 		</nav>
+
 		<router-view/>
   	</div>
 </template>
