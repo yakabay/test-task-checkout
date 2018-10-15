@@ -2,7 +2,7 @@
 	<div>
 		<div class="flex justify-between pt-2 pb-1">
 			<div class="flex">
-				<div class="border border-grey-lighter rounded" style="width: 3.6rem; height: 3.6rem;">
+				<div class="flex-no-shrink border border-grey-lighter rounded" style="width: 3.6rem; height: 3.6rem;">
 					<img :src="require(`@/assets${product.img_url}`)" alt="">
 				</div>
 				<div class="ml-3">

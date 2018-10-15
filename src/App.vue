@@ -7,7 +7,7 @@
 						<div class="flex justify-between items-center" style="height: 100%">
 							<router-link to="/" class="flex items-center">
 								<img src="@/assets/img/t-logo.png" alt="logo" class="h-8">
-								<span class="text-2xl text-primary font-thin pl-3 pt-1">Front-end Developer Test Task</span>
+								<span class="hidden sm:block text-2xl text-primary font-thin pl-3 pt-1">Front-end Developer Test Task</span>
 							</router-link>
 							<router-link to="/checkout/shipping" class="flex items-center">
 								<span class="text-pink-dark text-xl pr-1">cart</span>
